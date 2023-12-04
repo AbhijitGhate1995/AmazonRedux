@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "../features/counter/counterSlice";
+import { getCartTotal } from "../features/cartSlice";
 
 export default function Counter() {
   const count = useSelector((c) => c.counter.value);
   const dispatch = useDispatch();
+  
 
   return (
     <>

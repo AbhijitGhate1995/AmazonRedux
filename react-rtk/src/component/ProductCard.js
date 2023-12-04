@@ -1,15 +1,14 @@
 import React from "react";
-import shoe from "../images/shoe.png";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "primereact/button";
-import { addToCart } from "../features/counter/counterSlice";
+import { addToCart } from "../features/cartSlice";
 
 const ProductCard = () => {
   const items = useSelector((state) => state.allCart.items);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div style={{display: "flex" , gap:"20px"}}>
       {items.map((item) => (
         <div key={item.id}>
           <img
