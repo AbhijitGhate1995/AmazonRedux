@@ -14,7 +14,7 @@ const ProductCard = () => {
           <img
             src={item?.img}
             alt="..."
-            style={{ width: "100px", height: "100px" }}
+            style={{ width: "150px", height: "200px" }}
           />
           <div>{item.title}</div>
           <div>{item.price}</div>
