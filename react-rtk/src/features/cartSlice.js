@@ -30,7 +30,7 @@ const cartSlice = createSlice({
           const { price, quantity } = cartItem;
           console.log(price, quantity);
           const itemTotal = price * quantity;
-          cartTotal.totalPrice += itemTotal;
+          // cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;
           return cartTotal;
         },
