@@ -2,6 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "primereact/button";
 import { addToCart } from "../features/cartSlice";
+import "../App.css";
+
+
 
 const ProductCard = () => {
   const items = useSelector((state) => state.allCart.items);

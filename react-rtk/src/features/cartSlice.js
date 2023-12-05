@@ -27,6 +27,8 @@ const cartSlice = createSlice({
         (cartTotal, cartItem) => {
           const { price, quantity } = cartItem;
           console.log(price, quantity);
+          const itemTotal = price * quantity;
+          cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;
           return cartTotal;
         },
@@ -37,6 +39,8 @@ const cartSlice = createSlice({
       );
       state.totalPrice = parseInt(totalPrice.toFixed(2));
       state.totalQuantity = totalQuantity;
+      console.log("state",state.totalQuantity);
+
     },
 
     removeItem: (state, action) => {
