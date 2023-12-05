@@ -6,9 +6,6 @@ const CartPage = () => {
     const { cart, totalQuantity } = useSelector((state) => state.allCart);
 
     const dispatch = useDispatch();
-    useEffect(() => {
-      dispatch(getCartTotal());
-    }, [cart]);
 
   return (
     <div style={{gap:"50px",display:"flex"}}>
